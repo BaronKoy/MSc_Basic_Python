@@ -4,7 +4,7 @@ x=[]
 for l in f.readlines():
 	x.append(l.strip())
 
-
+#blah
 d=dict()
 for a in x:
 	y=basename(a).split('_')
