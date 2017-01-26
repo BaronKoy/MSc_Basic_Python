@@ -15,4 +15,13 @@ for a in x:
 		d[sample].append(a)
 
 print d
+
+
+import pymongo
+conn = pymongo.MongoClient(host='phenotips.cs.ucl.ac.uk', port=27017)
+db=conn['patients']
+db.patients.find()
+db.patients.find_one()
+[x for x in db.patients.find({'sex':'F'})]
+
 	
