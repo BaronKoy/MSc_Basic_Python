@@ -77,20 +77,15 @@ for x in l:
         xx=x.split(',')[0]
         #print (x)
         x2=xx.split(':')[1]
-        print(x2)
         a=subprocess.check_output(['bionode-ncbi', 'search', 'clinvar', x2])
         b=json.loads(a)
         #Forloop for variation set
         variation_set=b['variation_set']
         for v in variation_set:
-            if 'variation_loc' in v:
-                print (v['variation_loc'][1])
-            else:
-                print ('no_more_matches')
-        vloc=v['variation_loc'][1]
-        #d=c['band'],c['display_start'],c['stop'],d['strand'],c['ref'],c['alt']
-        var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
-        print (var)
-        rec=variants_db.variants.find_one({'variant_id':var})
-        if rec: print(rec['het_samples'])
-
+            if 'variation_loc' not in v: continue
+            for vloc in v['variation_loc']:
+                if vloc['assembly_name']!='GRCh37': continue
+                var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
+                rec=variants_db.variants.find_one({'variant_id':var})
+                if rec: print(var,x2,rec['het_samples'],rec['hom_samples'],sep=',')
+            else: print(var,x2,'not found', 'not found', sep=',')
