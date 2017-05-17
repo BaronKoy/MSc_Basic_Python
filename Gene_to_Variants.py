@@ -50,7 +50,7 @@ args=[
 ('q','*:*')]
 
 #'hpo='HP:0000556'
-'hpo='HP:0007750'
+hpo='HP:0007750'
 args={
 'defType':'edismax',
 'qt':'standard',
