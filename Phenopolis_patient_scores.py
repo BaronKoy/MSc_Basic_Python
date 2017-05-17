@@ -33,7 +33,6 @@ for patient in patients_db.patients.find():
     r=requests.get(url,headers={'Content-Type':'application/json'})
     d=r.json()
     print p['external_id'],d['simple_score']
-    break
 
 #Listing patients external_id with simple_score
 for patient in patients_db.patients.find():
