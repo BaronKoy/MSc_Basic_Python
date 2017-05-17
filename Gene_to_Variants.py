@@ -79,6 +79,7 @@ for x in l:
         x2=xx.split(':')[1]
         a=subprocess.check_output(['bionode-ncbi', 'search', 'clinvar', x2])
         b=json.loads(a)
+        gene=';'.join([x['symbol'] for x in b['genes']])
         #Forloop for variation set
         variation_set=b['variation_set']
         for v in variation_set:
@@ -87,5 +88,5 @@ for x in l:
                 if vloc['assembly_name']!='GRCh37': continue
                 var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
                 rec=variants_db.variants.find_one({'variant_id':var})
-                if rec: print(var,x2,rec['het_samples'],rec['hom_samples'],sep=',')
-            else: print(var,x2,'not found', 'not found', sep=',')
+                if rec: print(var,x2,gene,';'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
+                else: print(var,x2,gene,'not found', 'not found', sep=',')
