@@ -10,6 +10,10 @@ import requests
 import subprocess
 import pymongo
 import re
+import sys
+
+hpo=sys.argv[1]
+print (hpo)
 
 #machine holding patient information
 conn = pymongo.MongoClient(host='phenotips.cs.ucl.ac.uk', port=27017)
@@ -45,8 +49,8 @@ args=[
 ('facet.field','subject_taxon_label'),
 ('q','*:*')]
 
-hpo='HP:0000556'
-hpo='HP:0001135'
+#'hpo='HP:0000556'
+'hpo='HP:0007750'
 args={
 'defType':'edismax',
 'qt':'standard',
@@ -87,6 +91,12 @@ for x in l:
             for vloc in v['variation_loc']:
                 if vloc['assembly_name']!='GRCh37': continue
                 var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
+                exac=requests.get('http://exac.hms.harvard.edu/rest/variant/'+var)
+                if exac.status_code == requests.codes.ok:
+                    exac=exac.json()
+                    exac_af=exac['variant'].get('allele_freq',None)
+                else:
+                    exac_af=None
                 rec=variants_db.variants.find_one({'variant_id':var})
-                if rec: print(var,x2,gene,';'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
-                else: print(var,x2,gene,'not found', 'not found', sep=',')
+                if rec: print(var,x2,exac_af,gene,';'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
+                else: print(var,x2,exac_af,gene,'not found', 'not found', sep=',')
