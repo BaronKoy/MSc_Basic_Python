@@ -1,5 +1,5 @@
 '''Obtaining ClinVar information from json file created from Biolink API
-updated: 15/05/2017'''
+updated: 17/05/2017'''
 
 
 #packages
@@ -77,13 +77,20 @@ for x in l:
         xx=x.split(',')[0]
         #print (x)
         x2=xx.split(':')[1]
-        #print(x2)
+        print(x2)
         a=subprocess.check_output(['bionode-ncbi', 'search', 'clinvar', x2])
         b=json.loads(a)
-        print(b)
-        c=b['variation_set'][0]['variation_loc'][1]
+        #Forloop for variation set
+        variation_set=b['variation_set']
+        for v in variation_set:
+            if 'variation_loc' in v:
+                print (v['variation_loc'][1])
+            else:
+                print ('no_more_matches')
+        vloc=v['variation_loc'][1]
         #d=c['band'],c['display_start'],c['stop'],d['strand'],c['ref'],c['alt']
-        var='-'.join([c['chr'],c['start'],c['ref'],c['alt']])
-        print(var)
+        var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
+        print (var)
         rec=variants_db.variants.find_one({'variant_id':var})
         if rec: print(rec['het_samples'])
+
