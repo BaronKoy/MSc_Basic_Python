@@ -1,5 +1,5 @@
 '''Obtaining ClinVar information from json file created from Biolink API
-updated: 17/05/2017'''
+updated: 18/05/2017'''
 
 
 #packages
@@ -12,7 +12,7 @@ import pymongo
 import re
 import sys
 
-hpo=sys.argv[1]
+hpo=sys.argv[0]
 print (hpo)
 
 #machine holding patient information
@@ -73,7 +73,7 @@ args={
 'fq':'object_closure:"%s"' % hpo,
 'facet.field':'subject_taxon_label',
 'q':'*:*'}
-p=requests.get('https://solr.monarchinitiative.org/solr/golr/select/',params=args)
+p=requests.get('http://solr.monarchinitiative.org/solr/golr/select/',params=args)
 s=p.text
 l=s.split('\n')
 for x in l:
@@ -100,3 +100,4 @@ for x in l:
                 rec=variants_db.variants.find_one({'variant_id':var})
                 if rec: print(var,x2,exac_af,gene,';'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
                 else: print(var,x2,exac_af,gene,'not found', 'not found', sep=',')
+
