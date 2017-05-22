@@ -4,7 +4,7 @@ updated: 18/05/2017'''
 
 #packages
 from __future__ import print_function
-import json
+import json as simplejson
 import objectpath
 import requests
 import subprocess
@@ -81,7 +81,8 @@ for x in l:
         #print (x)
         x2=xx.split(':')[1]
         a=subprocess.check_output(['bionode-ncbi', 'search', 'clinvar', x2])
-        b=json.loads(a)
+        if not a: continue
+        b=simplejson.loads(a)
         gene=';'.join([x['symbol'] for x in b['genes']])
         #Forloop for variation set
         variation_set=b['variation_set']
