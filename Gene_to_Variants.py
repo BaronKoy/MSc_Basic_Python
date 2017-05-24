@@ -94,15 +94,19 @@ for x in l:
             for vloc in v['variation_loc']:
                 if vloc['assembly_name']!='GRCh37': continue
                 var='-'.join([vloc['chr'],vloc['start'],vloc['ref'],vloc['alt']])
+                lof=requests.get('http://exac.hms.harvard.edu/rest/variant/'+var)
+                if lof.status_code == requests.codes.ok:
+                    lof=lof.json()
+                    lof_af=lof.get('LoF')
+                else:
+                    lof_af=None
                 exac=requests.get('http://exac.hms.harvard.edu/rest/variant/'+var)
                 if exac.status_code == requests.codes.ok:
                     exac=exac.json()
                     exac_af=exac['variant'].get('allele_freq',None)
                 else:
                     exac_af=None
-                '''review=requests.get('https://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=clinvar&rettype=variation&id=139516')
-                xml=minidom.parse('review')
-                review_stat=xml.get('<review_status>')'''
                 rec=variants_db.variants.find_one({'variant_id':var})
-                if rec: print(var,x2,exac_af,gene,cdna,review,'.'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
-            else: print(var,x2,exac_af,gene,cdna,review,'not found', 'not found', sep=',')
+                if rec: print(var,x2,exac_af,gene,cdna,review,lof_af,'.'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
+            else: print(var,x2,exac_af,gene,cdna,review,lof_af,'not found', 'not found', sep=',')
+
