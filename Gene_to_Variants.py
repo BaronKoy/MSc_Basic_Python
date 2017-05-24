@@ -1,18 +1,19 @@
 '''Obtaining ClinVar information from json file created from Biolink API
-updated: 18/05/2017'''
+updated: 22/05/2017'''
 
 
 #packages
 from __future__ import print_function
-import json as simplejson
+import json
 import objectpath
 import requests
 import subprocess
 import pymongo
 import re
 import sys
+from xml.dom import minidom
 
-hpo=sys.argv[0]
+hpo=sys.argv[1]
 print (hpo)
 
 #machine holding patient information
@@ -45,10 +46,11 @@ args=[
 ('csv.header','true'),
 ('csv.mv.separator','|'),
 ('fq','subject_category:"variants"'),
-('fq','object_closure:"HP:0000556"'),
+('fq','object_closure:"HP:0007750"'),
 ('facet.field','subject_taxon_label'),
 ('q','*:*')]
 
+#'hpo='HP:0000556'
 hpo='HP:0007750'
 args={
 'defType':'edismax',
@@ -81,10 +83,11 @@ for x in l:
         #print (x)
         x2=xx.split(':')[1]
         a=subprocess.check_output(['bionode-ncbi', 'search', 'clinvar', x2])
-        if not a: continue
-        b=simplejson.loads(a)
+        b=json.loads(a)
         gene=';'.join([x['symbol'] for x in b['genes']])
         #Forloop for variation set
+        review=b['clinical_significance']['review_status']
+        cdna=b['variation_set'][0]['cdna_change']
         variation_set=b['variation_set']
         for v in variation_set:
             if 'variation_loc' not in v: continue
@@ -97,7 +100,9 @@ for x in l:
                     exac_af=exac['variant'].get('allele_freq',None)
                 else:
                     exac_af=None
+                '''review=requests.get('https://www.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=clinvar&rettype=variation&id=139516')
+                xml=minidom.parse('review')
+                review_stat=xml.get('<review_status>')'''
                 rec=variants_db.variants.find_one({'variant_id':var})
-                if rec: print(var,x2,exac_af,gene,';'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
-                else: print(var,x2,exac_af,gene,'not found', 'not found', sep=',')
-
+                if rec: print(var,x2,exac_af,gene,cdna,review,'.'.join(rec['het_samples']),';'.join(rec['hom_samples']),sep=',')
+            else: print(var,x2,exac_af,gene,cdna,review,'not found', 'not found', sep=',')
