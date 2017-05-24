@@ -7,7 +7,7 @@ import json
 import sys
 
 #database
-client = pymongo.MongoClient(host='phenotips.cs.ucl.ac.uk', port=27017)
+client = pymongo.MongoClient(host='**********', port=*****)
 patients_db = client['patients']
 
 
