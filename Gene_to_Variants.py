@@ -17,7 +17,7 @@ hpo=sys.argv[1]
 print (hpo)
 
 #machine holding patient information
-conn = pymongo.MongoClient(host='phenotips.cs.ucl.ac.uk', port=27017)
+conn = pymongo.MongoClient(host='***********************, port=*****)
 
 #dictionary that holds all variant and patient information
 variants_db=conn['uclex']
