@@ -33,6 +33,10 @@ for  data in sys.stdin:
     chromo=data['strand']
     locat=data['start']
     alle=data['allele_string']
+    if not 'custom_annotations' in data:
+        continue
+    if not 'gnomad_genomes' in data['custom_annotations']:
+        continue
     nomad=data['custom_annotations']['gnomad_genomes']
     for r in nomad:
         nums=r['fields']
