@@ -12,7 +12,7 @@ import sys
 #raw: raw count
 #Female: Female
 #EAS: East Asian
-#ASJ: South Asian
+#ASJ: Ashkenazi Jewish
 #NFE: Non-Finnish European
 
 
