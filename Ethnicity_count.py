@@ -1,4 +1,4 @@
-#Packages
+#PAFkages
 from __future__ import print_function
 import json
 import re
@@ -18,6 +18,7 @@ import sys
 
 total=dict()
 figs=dict()
+extra=dict()
 count_FIN=0
 count_AMR=0
 count_AFR=0
@@ -40,20 +41,27 @@ for  data in sys.stdin:
     nomad=data['custom_annotations']['gnomad_genomes']
     for r in nomad:
         nums=r['fields']
-        figs={'AC_FIN': nums['AC_FIN'],'AC_AMR': nums['AC_AMR'],'AC_AFR': nums['AC_AFR'],
-        'AC_OTH': nums['AC_OTH'],'AC_raw': nums['AC_raw'],'AC_Female': nums['AC_Female'],
-        'AC_EAS': nums['AC_EAS'],'AC_ASJ': nums['AC_ASJ'],'AC_NFE': nums['AC_NFE']}
-        count_FIN=count_FIN+nums['AC_FIN']
-        count_AMR=count_AMR+nums['AC_AMR']
-        count_AFR=count_AFR+nums['AC_AFR']
-        count_OTH=count_OTH+nums['AC_OTH']
-        count_raw=count_raw+nums['AC_raw']
-        count_Female=count_Female+nums['AC_Female']
-        count_EAS=count_EAS+nums['AC_EAS']
-        count_ASJ=count_ASJ+nums['AC_ASJ']
-        count_NFE=count_NFE+nums['AC_NFE']
-        print (chromo,locat,alle)
-        print (figs)
+        figs={'AF_FIN': nums['AF_FIN'],'AF_AMR': nums['AF_AMR'],'AF_AFR': nums['AF_AFR'],
+        'AF_OTH': nums['AF_OTH'],'AF_EAS': nums['AF_EAS'],'AF_ASJ': nums['AF_ASJ'],'AF_NFE': nums['AF_NFE']}
+        extra={'AF_raw': nums['AF_raw'],'AF_Female': nums['AF_Female']}
+        count_FIN=count_FIN+nums['AF_FIN']
+        count_AMR=count_AMR+nums['AF_AMR']
+        count_AFR=count_AFR+nums['AF_AFR']
+        count_OTH=count_OTH+nums['AF_OTH']
+        count_raw=count_raw+nums['AF_raw']
+        count_Female=count_Female+nums['AF_Female']
+        count_EAS=count_EAS+nums['AF_EAS']
+        count_ASJ=count_ASJ+nums['AF_ASJ']
+        count_NFE=count_NFE+nums['AF_NFE']
+        predict=max(figs)
+        print ('Variant_I.D:',chromo,locat,alle)
+        print (figs,extra)
     print ('FIN_total:',count_FIN,'AMR_total:',count_AMR,'AFR_total:',count_AFR,'OTH_total:',count_OTH,
     'raw_total:',count_raw,'Female_total:',count_Female,'EAS_total:',count_EAS,'ASJ_total:',count_ASJ,
     'NFE_total:',count_NFE)
+    print ('Predicted_ethnicity:',predict)
+
+#FIN_total: 319964251 AMR_total: 77875633 AFR_total: 910034519 OTH_total: 90369514 raw_total: 3084902102 Female_total: 1320682279 EAS_total: 151324917
+#ASJ_total: 27490326 NFE_total: 1361953022
+
+#Determining difference between largest and smallest.
