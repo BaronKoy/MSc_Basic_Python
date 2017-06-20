@@ -47,7 +47,7 @@ for data in sys.stdin:
          'AF_OTH': nums['AF_OTH'], 'AF_EAS': nums['AF_EAS'],'AF_ASJ': nums['AF_ASJ'],
          'AF_NFE':nums['AF_NFE']}
          extra={'AF_raw': nums['AF_raw'],'AF_Female': nums['AF_Female']}
-         sorted_figs=sorted(figs.items(), key=operator.itemgetter(1))
+         sorted_figs=sorted(figs.items(), key=operator.itemgetter(1),reverse=True)
          try:
              count_FIN=count_FIN+nums['AF_FIN']
              count_AMR=count_AMR+nums['AF_AMR']
@@ -63,8 +63,13 @@ for data in sys.stdin:
          predict=max(figs,key=figs.get)
          if predict==0:
              continue
+         comvar=sorted_figs[0][1]-sorted_figs[1][1]
          print ('Variant_I.D:',chromo,locat,alle)
          print (sorted_figs)
+         if sorted_figs[0][1]>=0.5 and comvar>=0.1:
+             print ('Suspected_high_ethnicity_variant:',sorted_figs[0])
+         else:
+             continue
          print ('Predicted_ethnicity:',predict)
     print ('FIN_total:',count_FIN,'AMR_total:',count_AMR,'AFR_total:',count_AFR,'OTH_total:', 
            count_OTH,'raw_total:',count_raw,'Female_total:',count_Female,'EAS_total:',count_EAS,'ASJ_total:',
