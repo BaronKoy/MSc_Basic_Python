@@ -72,7 +72,7 @@ for data in sys.stdin:
          print ('Variant_I.D:',chromo,locat,alle)
          print (sorted_figs)
          if sorted_figs[1][1]==0 and sorted_figs[0][1]>0:
-             print ('Single_ethnicity_variant:',sorted_figs[0])
+             print ('Single_ethnicity_variant:',sorted_figs[0],'ID:',chromo,locat,alle)
          else:
              continue
          print ('Predicted_ethnicity:',predict)
