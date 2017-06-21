@@ -1,5 +1,5 @@
 #Reads in json data and produces variant i.d, variant allele frequency counts by ethnicity,
-#variant allele frequency divided by raw allele count,
+#variant allele frequency divided by raw allele frequency,
 #And suspected variant alleles that have a large difference in frequency compared to other ethnicities
 
 #Packages
