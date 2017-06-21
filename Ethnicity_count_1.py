@@ -73,8 +73,8 @@ for data in sys.stdin:
          comvar=sorted_figs[0][1]-sorted_figs[1][1]
          print ('Variant_I.D:',chromo,locat,alle)
          print (sorted_figs)
-         for r in sorted_figs:
-             divraw=r[1]/nums['AF_raw']
+         for x in sorted_figs:
+             divraw=x[1]/nums['AF_raw']
              try:
                  print('raw_divide:',divraw)
              expect:
