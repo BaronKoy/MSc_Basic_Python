@@ -71,7 +71,7 @@ for data in sys.stdin:
              continue
          print ('Variant_I.D:',chromo,locat,alle)
          print (sorted_figs)
-         if sorted_figs[1][1]==0 and sorted_figs[0][1]:
+         if sorted_figs[1][1]==0 and sorted_figs[0][1]>0:
              print ('Single_ethnicity_variant:',sorted_figs[0])
          else:
              continue
