@@ -17,7 +17,6 @@ for l in sys.stdin:
         continue
     d=d.split()
     dhomhet=d[9].split(':')
-    print (dhomhet)
     if '1/1' in dhomhet[0]:
         homcount=homcount+1
     if '0/1' in dhomhet[0]:
