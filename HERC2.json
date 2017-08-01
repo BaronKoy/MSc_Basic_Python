@@ -1,0 +1,1369 @@
+{
+"associations": [
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:18438405",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "ulcerative colitis",
+"deprecated": null,
+"id": "DOID:8577",
+"description": null,
+"consider": null
+},
+"id": "117a9fcd-784d-4a43-94ec-45218fbe10c5",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": null,
+"id": "PMID:18438405"
+},
+{
+"lbl": null,
+"id": "MONARCH:4aba60d9cfde2948dda4c8d88578c03bf2165d6e"
+},
+{
+"lbl": "some variant of HERC2 that is marker/mechanism for Colitis, Ulcerative",
+"id": ":.well-known/genid/NCBIGene8924-MESHD003093VL"
+},
+{
+"lbl": "traceable author statement",
+"id": "ECO:0000033"
+},
+{
+"lbl": "ulcerative colitis",
+"id": "DOID:8577"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:4aba60d9cfde2948dda4c8d88578c03bf2165d6e",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/NCBIGene8924-MESHD003093VL"
+},
+{
+"sub": ":.well-known/genid/NCBIGene8924-MESHD003093VL",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:4aba60d9cfde2948dda4c8d88578c03bf2165d6e",
+"pred": "RO:0002558",
+"obj": "ECO:0000033"
+},
+{
+"sub": ":.well-known/genid/NCBIGene8924-MESHD003093VL",
+"pred": "RO:0002607",
+"obj": "DOID:8577"
+},
+{
+"sub": "MONARCH:4aba60d9cfde2948dda4c8d88578c03bf2165d6e",
+"pred": "dc:source",
+"obj": "PMID:18438405"
+},
+{
+"sub": "MONARCH:4aba60d9cfde2948dda4c8d88578c03bf2165d6e",
+"pred": "OBAN:association_has_object",
+"obj": "DOID:8577"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"https://data.monarchinitiative.org/ttl/ctd.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:25963972",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "skin sensitivity to sun",
+"deprecated": null,
+"id": "EFO:0004795",
+"description": null,
+"consider": null
+},
+"id": "be675246-96d5-444f-ab71-33288f9ccd66",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "skin sensitivity to sun",
+"id": "EFO:0004795"
+},
+{
+"lbl": null,
+"id": "MONARCH:24770b1baee43909118052819c07ac735e8e3a0c"
+},
+{
+"lbl": "rs149963581-C",
+"id": "dbSNP:rs149963581"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": null,
+"id": "PMID:25963972"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:24770b1baee43909118052819c07ac735e8e3a0c",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs149963581"
+},
+{
+"sub": "MONARCH:24770b1baee43909118052819c07ac735e8e3a0c",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "MONARCH:24770b1baee43909118052819c07ac735e8e3a0c",
+"pred": "dc:source",
+"obj": "PMID:25963972"
+},
+{
+"sub": "dbSNP:rs149963581",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:24770b1baee43909118052819c07ac735e8e3a0c",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0004795"
+},
+{
+"sub": "dbSNP:rs149963581",
+"pred": "RO:0002326",
+"obj": "EFO:0004795"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:26830138",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "Alzheimers disease",
+"deprecated": null,
+"id": "EFO:0000249",
+"description": null,
+"consider": null
+},
+"id": "f55a259c-5c88-443a-9a2c-6fe646035736",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "Alzheimers disease",
+"id": "EFO:0000249"
+},
+{
+"lbl": null,
+"id": "MONARCH:78e5e10e57788568fd030bb1ac254a3d13bd0b7e"
+},
+{
+"lbl": null,
+"id": "PMID:26830138"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": "rs8033755-A",
+"id": "dbSNP:rs8033755"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:78e5e10e57788568fd030bb1ac254a3d13bd0b7e",
+"pred": "dc:source",
+"obj": "PMID:26830138"
+},
+{
+"sub": "MONARCH:78e5e10e57788568fd030bb1ac254a3d13bd0b7e",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs8033755"
+},
+{
+"sub": "dbSNP:rs8033755",
+"pred": "RO:0002326",
+"obj": "EFO:0000249"
+},
+{
+"sub": "MONARCH:78e5e10e57788568fd030bb1ac254a3d13bd0b7e",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "dbSNP:rs8033755",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:78e5e10e57788568fd030bb1ac254a3d13bd0b7e",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0000249"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:22561518",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "Vitiligo",
+"deprecated": null,
+"id": "EFO:0004208",
+"description": null,
+"consider": null
+},
+"id": "996861b1-8065-4704-abd4-55f4b942d36e",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "Vitiligo",
+"id": "EFO:0004208"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": null,
+"id": "MONARCH:44b5542a1f3184be8ca1efea8a59198b1db4d9cd"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": "rs1129038-C",
+"id": "dbSNP:rs1129038"
+},
+{
+"lbl": null,
+"id": "PMID:22561518"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:44b5542a1f3184be8ca1efea8a59198b1db4d9cd",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "dbSNP:rs1129038",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "dbSNP:rs1129038",
+"pred": "RO:0002326",
+"obj": "EFO:0004208"
+},
+{
+"sub": "MONARCH:44b5542a1f3184be8ca1efea8a59198b1db4d9cd",
+"pred": "dc:source",
+"obj": "PMID:22561518"
+},
+{
+"sub": "MONARCH:44b5542a1f3184be8ca1efea8a59198b1db4d9cd",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs1129038"
+},
+{
+"sub": "MONARCH:44b5542a1f3184be8ca1efea8a59198b1db4d9cd",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0004208"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:23502783",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "multiple myeloma",
+"deprecated": null,
+"id": "EFO:0001378",
+"description": null,
+"consider": null
+},
+"id": "191f1c4b-46e7-41cb-80df-c7f64500ac0b",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "multiple myeloma",
+"id": "EFO:0001378"
+},
+{
+"lbl": "rs8028689-G",
+"id": "dbSNP:rs8028689"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": null,
+"id": "MONARCH:d70c732365cbd608b2dc14ccb061ba1f0dc11454"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": null,
+"id": "PMID:23502783"
+}
+],
+"edges": [
+{
+"sub": "dbSNP:rs8028689",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:d70c732365cbd608b2dc14ccb061ba1f0dc11454",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs8028689"
+},
+{
+"sub": "dbSNP:rs8028689",
+"pred": "RO:0002326",
+"obj": "EFO:0001378"
+},
+{
+"sub": "MONARCH:d70c732365cbd608b2dc14ccb061ba1f0dc11454",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0001378"
+},
+{
+"sub": "MONARCH:d70c732365cbd608b2dc14ccb061ba1f0dc11454",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "MONARCH:d70c732365cbd608b2dc14ccb061ba1f0dc11454",
+"pred": "dc:source",
+"obj": "PMID:23502783"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:26829030",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "squamous cell carcinoma",
+"deprecated": null,
+"id": "EFO:0000707",
+"description": null,
+"consider": null
+},
+"id": "f176379f-3000-4fb3-9cf5-dd4438e739c8",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": "squamous cell carcinoma",
+"id": "EFO:0000707"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": null,
+"id": "PMID:26829030"
+},
+{
+"lbl": null,
+"id": "MONARCH:343bc8836ed25ff61e80c74cc085c375e50a14ca"
+},
+{
+"lbl": "rs12916300-?",
+"id": "dbSNP:rs12916300"
+}
+],
+"edges": [
+{
+"sub": "dbSNP:rs12916300",
+"pred": "RO:0002326",
+"obj": "EFO:0000707"
+},
+{
+"sub": "MONARCH:343bc8836ed25ff61e80c74cc085c375e50a14ca",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0000707"
+},
+{
+"sub": "dbSNP:rs12916300",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:343bc8836ed25ff61e80c74cc085c375e50a14ca",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "MONARCH:343bc8836ed25ff61e80c74cc085c375e50a14ca",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs12916300"
+},
+{
+"sub": "MONARCH:343bc8836ed25ff61e80c74cc085c375e50a14ca",
+"pred": "dc:source",
+"obj": "PMID:26829030"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:25918132",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "Asthma, Occupational",
+"deprecated": null,
+"id": "MESH:D059366",
+"description": null,
+"consider": null
+},
+"id": "48359f5f-c7e1-4d9b-9b50-234eeb651a7c",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": null,
+"id": "PMID:25918132"
+},
+{
+"lbl": "some variant of HERC2 that is marker/mechanism for Asthma, Occupational",
+"id": ":.well-known/genid/NCBIGene8924-MESHD059366VL"
+},
+{
+"lbl": null,
+"id": "MONARCH:014ca82fb75dc3be46d49ef42b054e27756d8c34"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "Asthma, Occupational",
+"id": "MESH:D059366"
+},
+{
+"lbl": "traceable author statement",
+"id": "ECO:0000033"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:014ca82fb75dc3be46d49ef42b054e27756d8c34",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/NCBIGene8924-MESHD059366VL"
+},
+{
+"sub": "MONARCH:014ca82fb75dc3be46d49ef42b054e27756d8c34",
+"pred": "OBAN:association_has_object",
+"obj": "MESH:D059366"
+},
+{
+"sub": "MONARCH:014ca82fb75dc3be46d49ef42b054e27756d8c34",
+"pred": "RO:0002558",
+"obj": "ECO:0000033"
+},
+{
+"sub": ":.well-known/genid/NCBIGene8924-MESHD059366VL",
+"pred": "RO:0002607",
+"obj": "MESH:D059366"
+},
+{
+"sub": "MONARCH:014ca82fb75dc3be46d49ef42b054e27756d8c34",
+"pred": "dc:source",
+"obj": "PMID:25918132"
+},
+{
+"sub": ":.well-known/genid/NCBIGene8924-MESHD059366VL",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"https://data.monarchinitiative.org/ttl/ctd.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": null,
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "Prader-Willi syndrome",
+"deprecated": null,
+"id": "OMIM:176270",
+"description": null,
+"consider": null
+},
+"id": "21d10ce3-5391-41d6-ad53-3d5de155bf08",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": null,
+"id": "MONARCH:af74641ffaf369690d52358a7270946412c004d1"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "Prader-Willi syndrome",
+"id": "OMIM:176270"
+},
+{
+"lbl": "some variant of K10595 E3 ubiquitin-protein ligase HERC2 [EC:2.3.2.26] | (RefSeq) HERC2",
+"id": ":.well-known/genid/KEGG-hsa8924-OMIM176270VL"
+}
+],
+"edges": [
+{
+"sub": ":.well-known/genid/KEGG-hsa8924-OMIM176270VL",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:af74641ffaf369690d52358a7270946412c004d1",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/KEGG-hsa8924-OMIM176270VL"
+},
+{
+"sub": ":.well-known/genid/KEGG-hsa8924-OMIM176270VL",
+"pred": "RO:0002607",
+"obj": "OMIM:176270"
+},
+{
+"sub": "MONARCH:af74641ffaf369690d52358a7270946412c004d1",
+"pred": "OBAN:association_has_object",
+"obj": "OMIM:176270"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"https://data.monarchinitiative.org/ttl/kegg.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": [
+{
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": "PMID:25918132",
+"description": null,
+"consider": null
+}
+],
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "asthma",
+"deprecated": null,
+"id": "EFO:0000270",
+"description": null,
+"consider": null
+},
+"id": "a7d683ab-4480-497f-a3ad-b3fe23aa6270",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": null,
+"id": "PMID:25918132"
+},
+{
+"lbl": "asthma",
+"id": "EFO:0000270"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "combinatorial evidence used in automatic assertion",
+"id": "ECO:0000213"
+},
+{
+"lbl": null,
+"id": "MONARCH:4c84930d88b1e0404ce5b01484bf3736a9dd4916"
+},
+{
+"lbl": "rs12913832-G",
+"id": "dbSNP:rs12913832"
+}
+],
+"edges": [
+{
+"sub": "MONARCH:4c84930d88b1e0404ce5b01484bf3736a9dd4916",
+"pred": "OBAN:association_has_object",
+"obj": "EFO:0000270"
+},
+{
+"sub": "dbSNP:rs12913832",
+"pred": "GENO:0000408",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:4c84930d88b1e0404ce5b01484bf3736a9dd4916",
+"pred": "dc:source",
+"obj": "PMID:25918132"
+},
+{
+"sub": "dbSNP:rs12913832",
+"pred": "RO:0002326",
+"obj": "EFO:0000270"
+},
+{
+"sub": "MONARCH:4c84930d88b1e0404ce5b01484bf3736a9dd4916",
+"pred": "RO:0002558",
+"obj": "ECO:0000213"
+},
+{
+"sub": "dbSNP:rs12913832",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:4c84930d88b1e0404ce5b01484bf3736a9dd4916",
+"pred": "OBAN:association_has_subject",
+"obj": "dbSNP:rs12913832"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"https://data.monarchinitiative.org/ttl/omim.ttl",
+"http://data.monarchinitiative.org/ttl/gwascatalog.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+},
+{
+"subject_extension": null,
+"slim": null,
+"publications": null,
+"object": {
+"xrefs": null,
+"taxon": {
+"label": null,
+"id": null
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "Mental Retardation, Autosomal Recessive 38",
+"deprecated": null,
+"id": "OMIM:615516",
+"description": null,
+"consider": null
+},
+"id": "2d4f9706-a090-4c5e-b17b-a05fcd9db996",
+"type": null,
+"evidence_graph": {
+"nodes": [
+{
+"lbl": null,
+"id": "MONARCH:ae9f6a80adc0869a9f7835cca4ffd7d4637baa03"
+},
+{
+"lbl": "some variant of HERC2 that is a disease-causing germline mutation(s) (loss of function) in Developmental delay with autism spectrum disorder and gait instability",
+"id": ":.well-known/genid/331681-329195VL"
+},
+{
+"lbl": null,
+"id": "MONARCH:7962b34847494924a19c0734d2a5a04df6dd2e22"
+},
+{
+"lbl": "HERC2",
+"id": "NCBIGene:8924"
+},
+{
+"lbl": "some variant of K10595 E3 ubiquitin-protein ligase HERC2 [EC:2.3.2.26] | (RefSeq) HERC2",
+"id": ":.well-known/genid/KEGG-hsa8924-OMIM615516VL"
+},
+{
+"lbl": "Mental Retardation, Autosomal Recessive 38",
+"id": "OMIM:615516"
+},
+{
+"lbl": "NM_004667.5(HERC2):c.1781C>T (p.Pro594Leu)",
+"id": "ClinVarVariant:88738"
+},
+{
+"lbl": null,
+"id": "MONARCH:859f17cd34f89a4d1e7eb223ecf74a5270fbc854"
+},
+{
+"lbl": "imported manually asserted information used in automatic assertion",
+"id": "ECO:0000322"
+},
+{
+"lbl": "some variant of HERC2 that causes Mental retardation, autosomal recessive 38",
+"id": ":.well-known/genid/OMIM605837-615516VL"
+},
+{
+"lbl": "sequencing assay evidence",
+"id": "ECO:0000220"
+}
+],
+"edges": [
+{
+"sub": ":.well-known/genid/KEGG-hsa8924-OMIM615516VL",
+"pred": "RO:0002607",
+"obj": "OMIM:615516"
+},
+{
+"sub": "MONARCH:ae9f6a80adc0869a9f7835cca4ffd7d4637baa03",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/KEGG-hsa8924-OMIM615516VL"
+},
+{
+"sub": "MONARCH:7962b34847494924a19c0734d2a5a04df6dd2e22",
+"pred": "RO:0002558",
+"obj": "ECO:0000220"
+},
+{
+"sub": "MONARCH:859f17cd34f89a4d1e7eb223ecf74a5270fbc854",
+"pred": "RO:0002558",
+"obj": "ECO:0000322"
+},
+{
+"sub": "MONARCH:7962b34847494924a19c0734d2a5a04df6dd2e22",
+"pred": "OBAN:association_has_object",
+"obj": "OMIM:615516"
+},
+{
+"sub": ":.well-known/genid/KEGG-hsa8924-OMIM615516VL",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": "MONARCH:ae9f6a80adc0869a9f7835cca4ffd7d4637baa03",
+"pred": "OBAN:association_has_object",
+"obj": "OMIM:615516"
+},
+{
+"sub": "ClinVarVariant:88738",
+"pred": "GENO:0000840",
+"obj": "OMIM:615516"
+},
+{
+"sub": "MONARCH:859f17cd34f89a4d1e7eb223ecf74a5270fbc854",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/331681-329195VL"
+},
+{
+"sub": "ClinVarVariant:88738",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": ":.well-known/genid/OMIM605837-615516VL",
+"pred": "RO:0002200",
+"obj": "OMIM:615516"
+},
+{
+"sub": ":.well-known/genid/331681-329195VL",
+"pred": "RO:0002200",
+"obj": "OMIM:615516"
+},
+{
+"sub": "MONARCH:7962b34847494924a19c0734d2a5a04df6dd2e22",
+"pred": "OBAN:association_has_subject",
+"obj": ":.well-known/genid/OMIM605837-615516VL"
+},
+{
+"sub": "MONARCH:859f17cd34f89a4d1e7eb223ecf74a5270fbc854",
+"pred": "OBAN:association_has_object",
+"obj": "OMIM:615516"
+},
+{
+"sub": ":.well-known/genid/OMIM605837-615516VL",
+"pred": "GENO:0000418",
+"obj": "NCBIGene:8924"
+},
+{
+"sub": ":.well-known/genid/331681-329195VL",
+"pred": "GENO:0000408",
+"obj": "NCBIGene:8924"
+}
+]
+},
+"subject": {
+"xrefs": null,
+"taxon": {
+"label": "Homo sapiens",
+"id": "NCBITaxon:9606"
+},
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": "HERC2",
+"deprecated": null,
+"id": "NCBIGene:8924",
+"description": null,
+"consider": null
+},
+"provided_by": [
+"https://data.monarchinitiative.org/ttl/kegg.ttl",
+"http://data.monarchinitiative.org/ttl/orphanet.ttl",
+"https://data.monarchinitiative.org/ttl/omim.ttl",
+"http://data.monarchinitiative.org/ttl/clinvar.ttl"
+],
+"relation": {
+"types": null,
+"categories": null,
+"replaced_by": null,
+"synonyms": null,
+"label": null,
+"deprecated": null,
+"id": null,
+"description": null,
+"consider": null
+},
+"qualifiers": null,
+"object_extension": null,
+"evidence_types": null
+}
+],
+"compact_associations": null,
+"objects": [
+"DOID:8577",
+"EFO:0000249",
+"EFO:0000270",
+"EFO:0000707",
+"EFO:0001378",
+"EFO:0004208",
+"EFO:0004795",
+"MESH:D059366",
+"OMIM:176270",
+"OMIM:615516"
+],
+"start": null,
+"numFound": null,
+"facet_pivot": null,
+"facet_counts": {
+"subject_taxon_label": {
+"Homo sapiens": 10
+},
+"object_closure": {
+"MESH:D009461": 2,
+"BFO:0000020": 10,
+"owl:Thing": 10,
+"MESH:D009422": 2,
+"DOID:863": 2,
+"MESH:D008607": 2,
+"DOID:150": 2,
+"BFO:0000016": 10,
+"MESH:D004194": 10,
+"OBI:1110055": 10,
+"DOID:4": 10,
+"DOID:630": 2,
+"DOID:7": 4,
+"BFO:0000002": 10,
+"BFO:0000001": 10,
+"DOID:0060037": 2,
+"MESH:D019954": 2,
+"MESH:D065886": 2,
+"Orphanet:98006": 2,
+"BFO:0000017": 10,
+"UMLS:CN200528": 10,
+"MESH:D001523": 2,
+"DOID:1059": 2,
+"DOID:0060038": 2,
+"UMLS:C0442893": 10
+}
+}
+}
