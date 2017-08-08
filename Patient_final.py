@@ -1,13 +1,15 @@
+from __future__ import print_function
 from collections import Counter
 import pymongo
 import sys
 import re
 
-conn = pymongo.MongoClient(host='*********.**.ucl.ac.uk', port=*****)
-db=conn['u****']
+conn = pymongo.MongoClient(host='*********.cs.ucl.ac.uk', port=*****)
+db=conn['u*****']
 
 varlist=list()
 ethlist=list()
+genelist=list()
 homcount=0
 hetcount=0
 
@@ -17,6 +19,9 @@ for e in sys.stdin:
     data=data[0:5]
     del data[2:3]
     data='-'.join(data)
+    var=db.variants.find_one({'variant_id':data})
+    if var and 'canonical_cadd' in var and var['canonical_cadd'][0]>20:
+        genelist.append(var['canonical_gene_name_upper'][0])
     clin=db.clinvar.find_one({'Variant':data})
     if clin and clin['CLNDBN']!='not_specified':
         varlist.append(clin['CLNDBN'])
@@ -60,8 +65,6 @@ if homcount>hetcount:
     print ('Homozygous X : Male')
 else:
     print ('Heterozygous X : Female')
-
+print (genelist)
 print ('Ethnicity counts:',Counter(ethlist))
 print ('Disease variants:',Counter(varlist))
-
-
