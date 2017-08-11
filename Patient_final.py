@@ -4,8 +4,8 @@ import pymongo
 import sys
 import re
 
-conn = pymongo.MongoClient(host='*********.cs.ucl.ac.uk', port=*****)
-db=conn['u*****']
+conn = pymongo.MongoClient(host='phenotips')
+db=conn['uclex']
 
 varlist=list()
 ethlist=list()
