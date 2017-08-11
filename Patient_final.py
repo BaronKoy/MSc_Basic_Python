@@ -65,6 +65,6 @@ if homcount>hetcount:
     print ('Homozygous X : Male')
 else:
     print ('Heterozygous X : Female')
-print (genelist)
+print ('>20 genes:',Counter(genelist))
 print ('Ethnicity counts:',Counter(ethlist))
 print ('Disease variants:',Counter(varlist))
