@@ -1,4 +1,4 @@
-# MSc_Basic_Python
+# MSc Genetics of Human Disease
 Code to split and read files
 
 These files were used to navigate through various methods and the tools used for my MSc project on sorting and scoring of
